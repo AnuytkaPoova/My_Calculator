@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <style name="ButtonStyle_ping" >
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:shadowColor">#FF000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">-1</item>
+        <item name="android:shadowRadius">0.2</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:backgroundTint">@color/ping</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+    </style>
+
+    <style name="ButtonStyle_purple_light" >
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:shadowColor">#FF000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">-1</item>
+        <item name="android:shadowRadius">0.2</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:backgroundTint">@color/purple_light</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+    </style>
+
+    <style name="ButtonStyle_purple_dark" >
+        <item name="android:layout_width">fill_parent</item>
+        <item name="android:padding">20dp</item>
+        <item name="android:layout_margin">5dp</item>
+        <item name="android:shadowColor">#FF000000</item>
+        <item name="android:shadowDx">0</item>
+        <item name="android:shadowDy">-1</item>
+        <item name="android:shadowRadius">0.2</item>
+        <item name="android:textColor">@color/grey</item>
+        <item name="android:textSize">26sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:backgroundTint">@color/purple_dark</item>
+        <item name="android:gravity">center_vertical|center_horizontal</item>
+    </style>
+
+</resources>
+
+<!--
+<resources>
+</resources>
+ <item name="android:padding">20dp</item>
+parent="@android:style/Widget.Button"
+  <item name="android:background">@color/teal_700</item>
+background: установка в качестве фона как цвета, так и drawable
+onClick: установить метод, который будет запускаться при нажатии на кнопку
+minHeight: для определения минимальной высоты кнопки
+minWidth: для определения минимальной ширины кнопки
+stateListAnimator: определение анимации при изменении состояния кнопки
+focusable: для определения того, будет ли обработано нажатие клавиши
+clickable: указать, является ли кнопка кликабельной
+gravity: установка выравнивания текста кнопки
+textAppearance: установить стиль текста
+
+атрибут enabled для включения или выключения кнопки,
+установив его в true или false. Также это можно сделать программно,
+ вызвав метод setEnabled()
+-->
