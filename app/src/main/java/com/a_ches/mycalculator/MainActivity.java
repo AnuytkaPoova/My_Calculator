@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
             findViewById((int) numberIds[i]).setOnClickListener(numberButtonClickListener);
         }
         //цикл для прохождения по массиву кнопок с арифметическими действиями по id
-        //устаналивается свой обработчик при нажатии на кнопку
+        //устаналивается свой обработчик при нажатии на кнопку.
         for (int i = 0; i < actionsIds.length ; i++) {
             findViewById((int) actionsIds[i]).setOnClickListener(actionButtonOnclickListener);
         }
