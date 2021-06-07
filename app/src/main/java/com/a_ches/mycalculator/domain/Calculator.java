@@ -1,4 +1,6 @@
-package com.a_ches.mycalculator;
+package com.a_ches.mycalculator.domain;
+
+import com.a_ches.mycalculator.R;
 
 public class Calculator {
 
@@ -12,12 +14,6 @@ public class Calculator {
 
     private State state; // state - это текущее состояние калькулятора.
     // Показывает на каком этапе работы находится калькулятор.
-
-    private enum State { // список элементов для вывода калькулятором
-        firstArgInput,
-        secondArgInput,
-        resultShow
-    }
 
     public Calculator() {
         state = State.firstArgInput; //конструктор для инициалзации полей
@@ -65,20 +61,30 @@ public class Calculator {
                     inputStr.append(".");
                     break;
                 case R.id.Btn_del:
-                    inputStr.setLength(inputStr.length() -1);
+                    inputStr.setLength(inputStr.length() - 1);
                     break;
-                //case R.id.Btn_percent:
-                  //  firstArg = Double.parseDouble(inputStr.toString());
-                    //inputStr.append(firstArg / 100);;
-                    //break;
-
+                case R.id.Btn_percent:
+                    inputStr.append("%");
+                    break;
+                case R.id.Btn_min_or_plus:
+                    if (inputStr.toString().startsWith("-")) {
+                        break;
+                    } else if (inputStr.length() > 0) {
+                        inputStr.insert(0, "-");
+                    } else
+                        inputStr.append("-");
+                    break;
             }
         }
     }
 
     public void onActionPressed(double actionId) {//реакция на нажатие кнопки арифметических действий
         if (actionId == R.id.Btn_equally && state == State.secondArgInput) { //при нажатии равно
-            secondArg = Double.parseDouble(inputStr.toString());
+            if (inputStr.toString().endsWith("%")) {
+                secondArg = Double.parseDouble(inputStr.toString().replace("%", "")) / 100;
+            } else {
+                secondArg = Double.parseDouble(inputStr.toString());
+            }
             state = State.resultShow;
             inputStr.setLength(0);
             switch ((int) actionSelected) {
@@ -110,15 +116,6 @@ public class Calculator {
                     actionSelected = 0;
                     state = State.firstArgInput;
                     break;
-                case R.id.Btn_min_or_plus:
-                    actionSelected = R.id.Btn_min_or_plus; // нет реализации
-                    break;
-
-                    //case R.id.Btn_percent:
-                    //actionSelected = R.id.Btn_percent; // нет реализации
-                   // inputStr.append(firstArg / 100);
-                    //break;
-
                 case R.id.Btn_division:
                     actionSelected = R.id.Btn_division;
                     break;
@@ -134,25 +131,21 @@ public class Calculator {
                 case R.id.Btn_equally:
                     actionSelected = R.id.Btn_equally;
                     break;
-
             }
-
         } else if (actionId == R.id.Btn_C && state == State.resultShow || actionId == R.id.Btn_C && state == State.secondArgInput) {
             state = State.firstArgInput;
             inputStr.setLength(0);
-        } //else if (actionId == R.id.Btn_percent && state == State.firstArgInput ) {
-           // inputStr.append(firstArg / 100);}
-        // else if ( actionId == R.id.Btn_percent && state == State.secondArgInput) {
-         //   inputStr.append(secondArg / 100);;}
-
-
-
+        }
     }
-
-    // для отображения  вводимых значений и результата вычислений
 
     public String getText() { // проучаем строку из стринг билдера и возвращаем ее
         return inputStr.toString();
+    }
 
+    // для отображения  вводимых значений и результата вычислений
+    private enum State { // список элементов для вывода калькулятором
+        firstArgInput,
+        secondArgInput,
+        resultShow
     }
 }
