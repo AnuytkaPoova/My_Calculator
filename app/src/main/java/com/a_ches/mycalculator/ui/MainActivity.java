@@ -1,4 +1,4 @@
-package com.a_ches.mycalculator;
+package com.a_ches.mycalculator.ui;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -6,7 +6,8 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
 
-import org.w3c.dom.Text;
+import com.a_ches.mycalculator.R;
+import com.a_ches.mycalculator.domain.Calculator;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -30,12 +31,11 @@ public class MainActivity extends AppCompatActivity {
                R.id.Btn_9,
                R.id.Btn_comma_sign,
                R.id.Btn_del,
-               //R.id.Btn_percent
+               R.id.Btn_percent,
+               R.id.Btn_min_or_plus
         };
        double[] actionsIds = new double[] {
                 R.id.Btn_C,
-                R.id.Btn_min_or_plus,
-                R.id.Btn_percent,
                 R.id.Btn_division,
                 R.id.Btn_min,
                 R.id.Btn_plus,
