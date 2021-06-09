@@ -20,4 +20,9 @@
     <string name="key_comma_sign">,</string>
     <string name="key_equally">=</string>
     <string name="key_del">dl</string>
+    <string name="setting">настройки</string>
+    <string name="them_light">светлый экран</string>
+    <string name="them_dark">темный экран</string>
+    <string name="calc">калькулятор</string>
+    <string name="text_secondAct">Выберите тему калькулятора</string>
 </resources>

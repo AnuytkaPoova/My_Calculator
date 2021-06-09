@@ -107,7 +107,8 @@ public class Calculator {
                     break;
             }
 
-        } else if (inputStr.length() > 0 && state == State.firstArgInput) { //при нажатии кнопки действия после ввода первого числа
+
+        } else if (inputStr.length() > 0 && state == State.firstArgInput || inputStr.length() > 0 && state == State.resultShow) { //при нажатии кнопки действия после ввода первого числа
             firstArg = Double.parseDouble(inputStr.toString());
             state = State.secondArgInput;
             inputStr.setLength(0);

@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <style name="ButtonStyle_ping" >
-        <item name="android:layout_width">fill_parent</item>
+        <item name="android:layout_width">@dimen/_0dp</item>
+        <item name="android:layout_weight">1</item>
+        <item name="android:layout_height">wrap_content</item>
         <item name="android:padding">5dp</item>
         <item name="android:layout_marginLeft">10dp</item>
         <item name="android:layout_marginRight">10dp</item>
@@ -17,38 +19,17 @@
         <item name="android:fontFamily">@font/greatpoints</item>
     </style>
 
-    <style name="ButtonStyle_purple_light" >
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:padding">5dp</item>
-        <item name="android:layout_marginLeft">10dp</item>
-        <item name="android:layout_marginRight">10dp</item>
-        <item name="android:shadowColor">#FF000000</item>
-        <item name="android:shadowDx">0</item>
-        <item name="android:shadowDy">-1</item>
-        <item name="android:shadowRadius">0.2</item>
-        <item name="android:textColor">@color/grey</item>
-        <item name="android:textSize">26sp</item>
-        <item name="android:textStyle">normal</item>
+    <style name="ButtonStyle_purple_light"  parent="ButtonStyle_ping">
         <item name="android:backgroundTint">@color/purple_light</item>
-        <item name="android:gravity">center_vertical|center_horizontal</item>
-        <item name="android:fontFamily">@font/greatpoints</item>
     </style>
 
-    <style name="ButtonStyle_purple_dark" >
-        <item name="android:layout_width">fill_parent</item>
-        <item name="android:padding">5dp</item>
-        <item name="android:layout_marginLeft">10dp</item>
-        <item name="android:layout_marginRight">10dp</item>
-        <item name="android:shadowColor">#FF000000</item>
-        <item name="android:shadowDx">0</item>
-        <item name="android:shadowDy">-1</item>
-        <item name="android:shadowRadius">0.2</item>
-        <item name="android:textColor">@color/grey</item>
-        <item name="android:textSize">26sp</item>
-        <item name="android:textStyle">normal</item>
+    <style name="ButtonStyle_purple_dark" parent="ButtonStyle_ping" >
         <item name="android:backgroundTint">@color/purple_dark</item>
-        <item name="android:gravity">center_vertical|center_horizontal</item>
-        <item name="android:fontFamily">@font/greatpoints</item>
+    </style>
+
+    <style name="ColumnStyle">
+
+
     </style>
 
 </resources>
