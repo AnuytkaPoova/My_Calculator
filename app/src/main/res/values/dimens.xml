@@ -9,10 +9,12 @@
     <dimen name="_32dp">32dp</dimen>
     <dimen name="_40dp">40dp</dimen>
     <dimen name="_45dp">45dp</dimen>
+    <dimen name="_60dp">60dp</dimen>
     <dimen name="_80dp">80dp</dimen>
     <dimen name="_200dp">200dp</dimen>
     <dimen name="_235dp">235dp</dimen>
     <dimen name="_400dp">400dp</dimen>
     <dimen name="_500dp">500dp</dimen>
     <dimen name="_4sp">4sp</dimen>
+    <dimen name="_32sp">32sp</dimen>
 </resources>

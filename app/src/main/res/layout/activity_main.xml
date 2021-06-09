@@ -2,92 +2,59 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
+    android:layout_width="wrap_content"
     android:layout_height="match_parent"
-    android:background="@color/beige"
     android:padding="@dimen/_8dp"
     tools:context=".ui.MainActivity">
 
-    <TextView
-        android:id="@+id/head_1"
-        android:layout_width="@dimen/_0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_8dp"
-        android:textSize="@dimen/_4sp"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toLeftOf="@+id/head_2"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/head_2"
-        android:layout_width="@dimen/_0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_8dp"
-        android:textSize="@dimen/_4sp"
-        app:layout_constraintHorizontal_weight="1"
-        app:layout_constraintLeft_toRightOf="@+id/head_1"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/text"
+        android:id="@+id/text_secondAct"
         android:layout_width="@dimen/_0dp"
         android:layout_height="@dimen/_80dp"
         android:gravity="right|center_vertical"
         android:background="@drawable/input_text"
-        android:textSize="32sp"
-
+        android:textSize="@dimen/_32sp"
+        android:layout_marginTop="@dimen/_16dp"
         android:paddingTop="@dimen/_4dp"
         android:paddingBottom="@dimen/_8dp"
         android:paddingLeft="@dimen/_8dp"
         android:paddingRight="@dimen/_16dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/head_1" />
+        app:layout_constraintTop_toTopOf="parent"  />
 
     <ImageView
         android:layout_width="@dimen/_400dp"
         android:layout_height="@dimen/_400dp"
         android:scaleType="centerCrop"
         android:src="@drawable/ic_baseline_copyright_24"
-        app:layout_constraintBottom_toBottomOf="@+id/column_7"
+        app:layout_constraintBottom_toTopOf="@+id/column_7"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/column_3"
+        app:layout_constraintTop_toBottomOf="@+id/column_3"
         tools:ignore="MissingConstraints" />
 
 
     <LinearLayout
         android:id="@+id/column_3"
-        android:layout_width="@dimen/_0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_16dp"
+        style="@style/ColumnStyle"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text">
+        app:layout_constraintTop_toBottomOf="@+id/text_secondAct">
 
         <Button
             style="@style/ButtonStyle_purple_dark"
             android:id="@+id/Btn_C"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/key_c" />
 
         <Button
             style="@style/ButtonStyle_purple_light"
             android:id="@+id/Btn_min_or_plus"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/key_min_or_plus" />
 
         <Button
             style="@style/ButtonStyle_purple_light"
             android:id="@+id/Btn_percent"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/key_percent" />
 
         <Button
@@ -95,15 +62,12 @@
             android:id="@+id/Btn_division"
             android:layout_width="@dimen/_0dp"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/key_division" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/column_4"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        style="@style/ColumnStyle"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/column_3">
@@ -111,41 +75,27 @@
         <Button
             style="@style/ButtonStyle_ping"
             android:id="@+id/Btn_7"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/key__7" />
 
         <Button
             style="@style/ButtonStyle_ping"
             android:id="@+id/Btn_8"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/key__8" />
 
         <Button
             style="@style/ButtonStyle_ping"
             android:id="@+id/Btn_9"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/key__9" />
 
         <Button
             style="@style/ButtonStyle_purple_light"
             android:id="@+id/Btn_x"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/key_x" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/column_5"
-        android:layout_width="@dimen/_0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_16dp"
+        style="@style/ColumnStyle"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/column_4">
@@ -153,41 +103,27 @@
         <Button
             style="@style/ButtonStyle_ping"
             android:id="@+id/Btn_4"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/key_4" />
 
         <Button
             style="@style/ButtonStyle_ping"
             android:id="@+id/Btn_5"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/key_5" />
 
         <Button
             style="@style/ButtonStyle_ping"
             android:id="@+id/Btn_6"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/key_6" />
 
         <Button
             style="@style/ButtonStyle_purple_light"
             android:id="@+id/Btn_min"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/key_min" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/column_6"
-        android:layout_width="@dimen/_0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        style="@style/ColumnStyle"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/column_5">
@@ -195,41 +131,27 @@
         <Button
             style="@style/ButtonStyle_ping"
             android:id="@+id/Btn_1"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/key_1" />
 
         <Button
             style="@style/ButtonStyle_ping"
             android:id="@+id/Btn_2"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/key_2" />
 
         <Button
             style="@style/ButtonStyle_ping"
             android:id="@+id/Btn_3"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/key_3" />
 
         <Button
             style="@style/ButtonStyle_purple_light"
             android:id="@+id/Btn_plus"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/key_plus" />
     </LinearLayout>
 
     <LinearLayout
         android:id="@+id/column_7"
-        android:layout_width="@dimen/_0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_16dp"
+        style="@style/ColumnStyle"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/column_6">
@@ -237,39 +159,64 @@
         <Button
             style="@style/ButtonStyle_ping"
             android:id="@+id/Btn_0"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/key_0" />
 
         <Button
             style="@style/ButtonStyle_ping"
             android:id="@+id/Btn_comma_sign"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/key_comma_sign" />
 
         <Button
             style="@style/ButtonStyle_ping"
             android:id="@+id/Btn_del"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/key_del" />
 
         <Button
             style="@style/ButtonStyle_purple_dark"
             android:id="@+id/Btn_equally"
-            android:layout_width="@dimen/_0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:text="@string/key_equally" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/column_8"
+        style="@style/ColumnStyle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/column_7">
+
+        <Button
+            android:id="@+id/Btn_setting"
+            style="@style/ButtonStyle_ping"
+            android:onClick="clickInfo"
+            android:text="@string/setting"
+            tools:targetApi="lollipop" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/column_9"
+        style="@style/ColumnStyle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/column_8">
+
+    <TextView
+        android:id="@+id/welcome_msg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/column_8">
+
+    </TextView>
+
+
     </LinearLayout>
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
 
     <!-- android:onClick="onOperationClick"
+    android:background="@color/beige"
+
 
     <androidx.appcompat.widget.AppCompatImageView-->

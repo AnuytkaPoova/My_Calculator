@@ -31,7 +31,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/text"
+        android:id="@+id/text_secondAct"
         android:layout_width="@dimen/_0dp"
         android:layout_height="@dimen/_45dp"
         android:gravity="right|center_vertical"
@@ -64,7 +64,7 @@
         android:layout_marginTop="@dimen/_2dp"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/text">
+        app:layout_constraintTop_toBottomOf="@+id/text_secondAct">
 
         <Button
             style="@style/ButtonStyle_purple_dark"

@@ -1,22 +1,63 @@
 package com.a_ches.mycalculator.ui;
 
+import androidx.activity.result.ActivityResult;
+import androidx.activity.result.ActivityResultCallback;
+import androidx.activity.result.ActivityResultLauncher;
+import androidx.activity.result.contract.ActivityResultContracts;
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.app.Activity;
+import android.content.Intent;
+import android.net.Uri;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.a_ches.mycalculator.R;
 import com.a_ches.mycalculator.domain.Calculator;
+import com.a_ches.mycalculator.domain.ThemStorage;
 
 public class MainActivity extends AppCompatActivity {
 
     private Calculator calculator;
     private TextView text;
+    private ThemStorage storage;
+    //intentsact://welcome
+    //intentsact://welcome
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        storage = new ThemStorage(this);
+
+        setTheme(storage.getTheme().getResourses());
+
         setContentView(R.layout.activity_main);
+
+        TextView welcomeMessage = findViewById(R.id.welcome_msg);
+
+        if (getIntent() != null && getIntent().hasExtra("welcomemessage")) {
+            welcomeMessage.setText(getIntent().getStringExtra("welcomemessage"));
+        }
+
+        /*
+        ActivityResultLauncher<Intent> launcher = registerForActivityResult(new ActivityResultContracts.StartActivityForResult(), new ActivityResultCallback<ActivityResult>() {
+            @Override
+            public void onActivityResult(ActivityResult result) {
+                if (result.getResultCode() == Activity.RESULT_OK) {
+                    if (result.getData() != null) {
+                        Toast.makeText(MainActivity.this, result.getData().getStringExtra(SecondActivity.KEY_RESULT), Toast.LENGTH_LONG).show();
+                    }
+                }
+            }
+        });
+
+         */
+
+
+
+
 
         double[] numberIds = new double[] {
                R.id.Btn_0,
@@ -44,7 +85,7 @@ public class MainActivity extends AppCompatActivity {
                 };
 
         // для вывода вводимых значений и результата вычислений
-        text = findViewById(R.id.text); // текстовое поле инициализированно
+        text = findViewById(R.id.text_secondAct); // текстовое поле инициализированно
         calculator = new Calculator();
 
         // обработчики событий для различных кнопок
@@ -77,4 +118,16 @@ public class MainActivity extends AppCompatActivity {
 
 
     }
+
+    public void clickInfo(View view) {
+        runActivity(SecondActivity.class);
+    }
+
+    private void runActivity(Class<?> cls) {
+        Intent intent = new Intent(this, cls);
+        startActivity(intent);
+    }
 }
+
+
+//

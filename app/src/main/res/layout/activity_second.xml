@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="@dimen/_8dp"
+    tools:context=".ui.SecondActivity">
+
+
+
+    <TextView
+        android:id="@+id/text_secondAct"
+        android:layout_width="@dimen/_0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@drawable/input_text"
+        android:textSize="@dimen/_32sp"
+        android:text="@string/text_secondAct"
+        android:layout_marginTop="@dimen/_40dp"
+        android:paddingTop="@dimen/_4dp"
+        android:paddingBottom="@dimen/_8dp"
+        android:paddingLeft="@dimen/_8dp"
+        android:paddingRight="@dimen/_16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="@dimen/_400dp"
+        android:layout_height="@dimen/_235dp"
+        android:scaleType="centerCrop"
+        android:src="@drawable/ic_baseline_copyright_24"
+        app:layout_constraintTop_toBottomOf="@+id/column_2"
+        tools:ignore="MissingConstraints"
+        tools:layout_editor_absoluteX="8dp" />
+
+
+    <LinearLayout
+        android:id="@+id/column_1"
+        style="@style/ColumnStyle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/text_secondAct">
+
+        <Button
+            style="@style/ButtonStyle_purple_light"
+            android:id="@+id/default_theme"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/them_light" />
+
+        <Button
+            style="@style/ButtonStyle_purple_dark"
+            android:id="@+id/custom"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/them_dark" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/column_2"
+        style="@style/ColumnStyle"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/column_1">
+
+        <Button
+            style="@style/ButtonStyle_ping"
+            android:id="@+id/calc"
+            android:layout_width="@dimen/_0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="@string/calc"
+            android:onClick="clickCalculator"/>
+
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
